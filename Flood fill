@@ -1,0 +1,44 @@
+#define MAX_PIXELS 10000   // Adjust based on image size
+
+typedef struct {
+    int r;
+    int c;
+} Pixel;
+
+void floodFill(int image[][100], int rows, int cols,
+               int sr, int sc, int newColor)
+{
+    int oldColor = image[sr][sc];
+    if (oldColor == newColor)
+        return;
+
+    Pixel stack[MAX_PIXELS];
+    int top = -1;
+
+    // Push starting pixel
+    stack[++top] = (Pixel){sr, sc};
+
+    while (top >= 0)
+    {
+        Pixel p = stack[top--];
+        int r = p.r;
+        int c = p.c;
+
+        // Boundary check
+        if (r < 0 || r >= rows || c < 0 || c >= cols)
+            continue;
+
+        // Color check
+        if (image[r][c] != oldColor)
+            continue;
+
+        // Fill pixel
+        image[r][c] = newColor;
+
+        // Push neighbors
+        stack[++top] = (Pixel){r + 1, c};
+        stack[++top] = (Pixel){r - 1, c};
+        stack[++top] = (Pixel){r, c + 1};
+        stack[++top] = (Pixel){r, c - 1};
+    }
+}
