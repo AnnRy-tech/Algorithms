@@ -1,0 +1,45 @@
+Kadane’s Algorithm finds the maximum sum contiguous subarray in:
+
+O(n) time
+
+O(1) extra space
+
+It’s extremely lightweight, which makes it suitable for memory-constrained systems.
+Kadane’s algorithm may be used in embedded systems for:
+
+1️⃣ Signal Processing
+
+Detecting bursts in sensor data
+
+Finding maximum energy windows in vibration or audio signals
+
+Identifying anomaly spikes
+
+Example:
+A vibration sensor on a motor controller may use a Kadane-style approach to detect the strongest continuous vibration segment.
+
+2️⃣ Power / Energy Monitoring
+
+Detecting peak load windows
+
+Finding maximum power consumption intervals
+
+3️⃣ Real-Time Data Streams
+
+Since it:
+
+Uses constant memory
+
+Requires only a single pass
+
+Has no recursion
+
+Has minimal CPU cost
+
+…it fits well in:
+
+Microcontrollers (ARM Cortex-M, AVR, ESP32)
+
+Low-memory RTOS systems
+
+Edge IoT devices
