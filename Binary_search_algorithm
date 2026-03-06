@@ -1,0 +1,35 @@
+What is Binary Search?
+
+Binary search is a fast way to find an item in a sorted list. Instead of checking every item one by one, it keeps dividing the list in half until it finds the target.
+
+How it works:
+
+Start with the middle element of the list.
+
+If it matches your target → done.
+
+If the target is smaller → search the left half.
+
+If the target is bigger → search the right half.
+
+Repeat steps 1–4 until you find the target or run out of elements.
+
+Key point: The list must be sorted for binary search to work.
+
+Uses of Binary Search
+
+Finding a number in a sorted array.
+
+Searching words in a dictionary or contacts list.
+
+Finding boundaries in games or problems (like maximum/minimum values that satisfy a condition).
+
+Used in databases and file systems for fast lookup.
+
+Real-life Examples
+
+Searching for a name in phone contacts.
+
+Searching for a product in online stores.
+
+Looking up words in digital dictionaries.
